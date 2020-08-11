@@ -12,23 +12,23 @@ final class Question1ViewController: UIViewController {
         super.viewDidLoad()
         //画面表示時にTextViewをクリア
         textView.text = ""
+        //画面表示時にlabelをクリア
         label.text = ""
     }
     
     @IBAction func tapButton(_ sender: Any) {
-        var a: String
-        var b: String
+        var aa: String
+        var bb: String
         
         if textField.text == "" {
             label.text = "文字を入力してください"
             
         } else {
-            a = textField.text!
-            b = textView.text
-            //Buttonを押すとTextFieldの文字をTextViewに表示
-            //textView.text = textField.text
-            textView.text = b + "\n" + a
-            
+            aa = textField.text!
+            bb = textView.text
+            //Buttonを押すとTextFieldの文字をTextViewに追加・改行して表示
+            textView.text = bb + "\n" + aa
+            //labelをクリア
             label.text = ""
         }
     }
